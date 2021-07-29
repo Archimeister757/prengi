@@ -1,0 +1,176 @@
+@media (max-width: 1200px) {
+    .header {
+        padding: 0;
+        &__top {
+            display: none;
+        }
+    }
+    .container {
+        max-width: 960px;
+    }
+    .promo {
+        padding: 40px 10px 0 10px;
+        &__down {
+            justify-content: start;
+        }
+        &__content {
+            align-items: center;
+        }
+        &__title, &__subtitle {
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+    .promo {
+        padding: 40px 10px;
+        &__down {
+            grid-template-columns: minmax(auto, 538px);
+            justify-content: center;
+            img {
+                display: none;
+            }
+        }
+        &__up {
+            grid-template-columns: minmax(auto, 140px) minmax(auto, 550px);
+        }
+        &__title {
+            margin: 100px 0 27px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+    .promo {
+        position: relative;
+        padding: 60px 10px 40px;
+        &__menu {
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            top: -13px;
+            left: -100%;
+            width: 50%;
+            height: 100vh;
+            z-index: 10;
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.6s;
+            background-color: #3498dbe3;
+            &_active {
+                left: 0;
+                visibility: visible;
+                opacity: 1;
+            }
+            &-item {
+                position: relative;
+                font-size: 20px;
+                line-height: 46px;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: -25px;
+                    top: 15px;
+                    width: 10px;
+                    height: 10px;
+                    border: 1px solid #fff;
+                    border-radius: 100%;
+                    transition: all .6s;
+                }
+                &:hover {
+                    &::before {
+                        background-color: #fff;
+                    }
+                }
+            }  
+            a {
+                &:hover {
+                    &::before {
+                        width: 0;
+                    }
+                }
+            }  
+        }   
+    }
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        background-color: #3498dbe3;
+        z-index: 5;
+    }
+    .humburger {
+        display: block;
+        position: absolute;
+        right: 11px;
+        top: 25px;
+        transform: translateY(-50%);
+        width: 35px;
+        height: 12px;
+        span {
+            display: block;
+            height: 2px;
+            width:  100%;
+            background-color: #fff;
+            margin-bottom: 6px;
+            transition: 0.5s all;
+        }
+        &_active {
+            span {
+                margin-bottom: -2px;
+                &:nth-child(1) {
+                    transform: translateY(3px) rotate(-45deg);
+                }    
+                &:nth-child(2) {
+                    display: none;
+                }
+                &:nth-child(3) {
+                    transform: translateY(3px) rotate(45deg);
+                }
+                    
+            }
+                
+        }
+            
+    }
+        
+}
+
+@media (max-width: 576px) {
+    .container {
+        width: 100%;
+    }
+    .promo {
+        &__up {
+            grid-template-columns: minmax(auto,100px) minmax(auto,550px)
+        }
+        &__title {
+            margin: 64px 0 27px;
+            font-size: 34px;
+        }
+        &__subtitle {
+            font-size: 20px;
+        }
+        &__menu {
+            width: 70%;
+            &-item {
+                font-size: 18px;
+            }
+        }
+        
+    }
+    .btn {
+        width: 210px;
+        height: 50px;
+    }
+}
