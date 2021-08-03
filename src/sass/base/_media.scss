@@ -20,6 +20,14 @@
             text-align: center;
         }
     }
+    .possibilities {
+        &__blocks {
+            grid-template-columns: repeat(3, 285px);
+        }
+        &__text {
+            font-size: 15px;
+        }
+    }
 }
 
 @media (max-width: 992px) {
@@ -42,6 +50,61 @@
             margin: 100px 0 27px;
         }
     }
+    .possibilities {
+        &__blocks {
+            margin-top: 30px;
+            grid-template-columns: repeat(2, 225px);
+            grid-template-rows: repeat(3, 230px);
+            justify-content: space-around;
+        }
+        &__header {
+            position: relative;
+            text-align: center;
+            top: auto;
+            left: auto;
+            transform: none;
+            &::before {
+                display: none;
+            }
+        }
+        &__block {
+            padding: 25px 30px 40px 30px;
+        }
+        &__text {
+            font-size: 13px;
+        }
+    }
+    #one {
+        order: 1;
+    }
+    #two {
+        order: 3;
+    }
+    #three {
+        order: 5;
+    }
+    #four {
+        order: 2;
+    }
+    #five {
+        order: 4;
+    }
+    #six {
+        order: 6;
+    }
+    #one, #two, #three {
+        &::before {
+            content: '';
+            position: absolute;
+            transform: rotate(-90deg);
+            bottom: 35%;
+            right: -73%;
+            background: url('../../icon/twoScreen/arrow.png');
+            width: 170px;
+            height: 73px;
+        }
+    }
+    
 }
 
 @media (max-width: 768px) {
@@ -99,6 +162,27 @@
                 }
             }  
         }   
+    }
+    .possibilities {
+        padding: 60px 0;
+        &__blocks {
+            grid-template-columns: repeat(2, 190px);
+            grid-template-rows: repeat(3, 225px);
+        }
+        &__block {
+            padding: 25px 20px 40px 20px;
+        }
+        &__text {
+            font-size: 12px;
+        }
+        &__header {
+            font-size: 44px;
+        }
+    }
+    #one, #two, #three {
+        &::before {
+            right: -68%;
+        }
     }
     nav {
         position: fixed;
@@ -169,8 +253,50 @@
         }
         
     }
+    .possibilities {
+        padding: 40px 0;
+        min-height: 805px;
+        &__blocks {
+            min-height: auto;
+            margin-top: 20px;
+            grid-template-columns: repeat(2, 40%);
+            grid-template-rows: repeat(3, 200px);
+            row-gap: 30px;
+            align-content: unset;
+        }
+        &__block {
+            padding: 25px 10px;
+            img {
+                width: 50%;
+            }
+        }
+        &__text {
+            margin-top: 20px;
+            font-size: 11px;
+        }
+        &__header {
+            font-size: 40px;
+        }
+    }
+    #one, #two, #three {
+        &::before {
+            background: url('../../icon/twoScreen/arrowMobile.svg');
+            transform: none;
+            width: 30px;
+            height: 30px;
+            right: -33px;
+            bottom: 40%;
+        }
+    }
+    /* #one, #two, #three, #four, #five, #six {
+        order: 1;
+        &::before {
+            display: none;
+        }
+    } */
     .btn {
         width: 210px;
         height: 50px;
     }
+    
 }

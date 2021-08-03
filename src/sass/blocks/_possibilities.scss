@@ -1,0 +1,78 @@
+.possibilities {
+    position: relative;
+    min-height: 900px;
+    padding: 80px 0;
+    &__blocks {
+        display: grid;
+        min-height: 740px;
+        grid-template-columns: repeat(3, 360px);
+        grid-template-rows: repeat(2, 255px);
+        align-content: space-between;
+        justify-content: space-between;
+    }
+    &__block {
+        position: relative;
+        padding: 25px 47px 40px 47px;
+        border: 1px solid #393939;
+        z-index: 1;
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            background: url('../../icon/twoScreen/question.png');
+            bottom: 0;
+            right: 0;
+            width: 90px;
+            height: 93px;
+            z-index: -1;
+        }
+        &.answer {
+            &::after {
+                content: '';
+                position: absolute;
+                background: url('../../icon/twoScreen/answer.png');
+                bottom: 0;
+                right: 0;
+                width: 102px;
+                height: 93px;
+                z-index: -1;
+            }
+        }
+    }
+    &__header {
+        position: absolute;
+        top: 52%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 48px;
+        font-weight: bold;
+        color: #393939;
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: url('../../icon/twoScreen/arrow.png');
+            width: 170px;
+            height: 73px;
+        }
+       
+    }
+    &__text {
+        position: relative;
+        margin-top: 25px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 300;
+        color: #393939;
+        &.bold {
+            font-weight: bold;
+        }
+        
+    }
+
+}
