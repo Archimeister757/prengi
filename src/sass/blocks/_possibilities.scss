@@ -22,7 +22,7 @@
         &::after {
             content: '';
             position: absolute;
-            background: url('../../icon/twoScreen/question.png');
+            background: url('../../icons/twoScreen/question.png');
             bottom: 0;
             right: 0;
             width: 90px;
@@ -33,7 +33,7 @@
             &::after {
                 content: '';
                 position: absolute;
-                background: url('../../icon/twoScreen/answer.png');
+                background: url('../../icons/twoScreen/answer.png');
                 bottom: 0;
                 right: 0;
                 width: 102px;
@@ -56,7 +56,7 @@
             bottom: 80px;
             left: 50%;
             transform: translateX(-50%);
-            background: url('../../icon/twoScreen/arrow.png');
+            background: url('../../icons/twoScreen/arrow.png');
             width: 170px;
             height: 73px;
         }
