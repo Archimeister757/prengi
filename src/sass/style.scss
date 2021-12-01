@@ -4,7 +4,9 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
-
+h2 {
+    margin: 0;
+}
 body {
     margin: 0;
 }
@@ -46,9 +48,19 @@ body {
         }
     }
 }
+.header {
+    color: #FFFFFF;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    &_first {
+        margin: 0 auto;
+        width: 600px;
+    }
+}
 
 @import 'base/variables';
-@import 'blocks/header';
+@import 'blocks/cap';
 @import 'blocks/promo';
 @import 'blocks/possibilities';
 @import 'blocks/decision';
