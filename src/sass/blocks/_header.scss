@@ -1,0 +1,25 @@
+.header {
+    padding: 20px 0;
+    &__top {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(169px, 250px));
+        justify-content: space-between;
+    }
+    &__block {
+        display: grid;
+        grid-template-columns: 24px auto;
+        column-gap: 15px;
+        font-size: 12px;
+        font-weight: 300;
+        color: #242424;
+        &-title {
+            font-weight: 500;
+        }
+        &-content {
+            a {
+                text-decoration: none;
+                color: #000;
+            }
+        }
+    }
+}
