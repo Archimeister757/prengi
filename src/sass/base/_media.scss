@@ -1,5 +1,5 @@
 @media (max-width: 1200px) {
-    .header {
+    .cap {
         padding: 0;
         &__top {
             display: none;
@@ -27,6 +27,18 @@
         &__text {
             font-size: 15px;
         }
+    }
+    .carousel {
+        &__inner {
+            width: 800px;
+        }
+        img {
+            width: 800px;
+            height: auto;
+        }
+    }
+    .decision {
+        background: url('../img/decision/slider_bg_small.jpg') center (center/cover) no-repeat;
     }
 }
 
@@ -99,9 +111,22 @@
             transform: rotate(-90deg);
             bottom: 35%;
             right: -73%;
-            background: url('../../icon/twoScreen/arrow.png');
+            background: url('../../icons/twoScreen/arrow.png');
             width: 170px;
             height: 73px;
+        }
+    }
+    .carousel {
+        &__inner {
+            width: 650px;
+        }
+        img {
+            width: 650px;
+        }
+    }
+    .decision {
+        &__menu {
+            width: 650px;
         }
     }
     
@@ -161,7 +186,22 @@
                     }
                 }
             }  
-        }   
+        }
+        &__title {
+            font-size: 38px;
+            font-weight: 700;
+            margin: 70px 0 40px;
+        }
+        &__subtitle {
+            font-size: 19px;
+        }
+        
+           
+    }
+    .btn {
+        width: 215px;
+        height: 50px;
+        font-size: 15px;
     }
     .possibilities {
         padding: 60px 0;
@@ -176,7 +216,7 @@
             font-size: 12px;
         }
         &__header {
-            font-size: 44px;
+            font-size: 40px;
         }
     }
     #one, #two, #three {
@@ -227,6 +267,30 @@
         }
             
     }
+    .carousel {
+        &__inner {
+            width: 500px;
+        }
+        img {
+            width: 500px;
+        }
+    }
+    .decision {
+        &__menu {
+            width: 500px;
+            height: 45px;
+            &-item {
+                font-size: 11px;
+                &:after {
+                    top: -12px;
+                    height: 37px;
+                }
+            }
+        }
+    }
+    .header {
+        font-size: 25px;
+    }
         
 }
 
@@ -239,11 +303,11 @@
             grid-template-columns: minmax(auto,100px) minmax(auto,550px)
         }
         &__title {
-            margin: 64px 0 27px;
-            font-size: 34px;
+            margin: 45px 0 27px;
+            font-size: 30px;
         }
         &__subtitle {
-            font-size: 20px;
+            font-size: 18px;
         }
         &__menu {
             width: 70%;
@@ -275,7 +339,7 @@
             font-size: 11px;
         }
         &__header {
-            font-size: 40px;
+            font-size: 30px;
         }
     }
     #one, #two, #three {
@@ -289,8 +353,22 @@
         }
     }
     .btn {
-        width: 210px;
-        height: 50px;
+        width: 185px;
+        height: 40px;
+        font-size: 13px;
     }
-    
+    .carousel {
+        &__inner {
+            width: 320px;
+        }
+        img {
+            width: 320px;
+        }
+    }
+    .decision {
+        padding: 55px 0;
+    }
+    .header {
+        font-size: 21px;
+    }
 }

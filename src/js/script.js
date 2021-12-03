@@ -20,7 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
             speed: 500,
             infinite: true,
             variableWidth: true,
-            autoplay: true,
+            autoplay: false,
             autoplaySpeed: 4000,
             prevArrow: '<button type="button" class="slick-prev"><img src="icons/slider/left_arrow.png"></button>',
             nextArrow: '<button type="button" class="slick-next"><img src="icons/slider/right_arrow.png"></button>',
@@ -36,6 +36,8 @@ window.addEventListener('DOMContentLoaded', () => {
             ]
         });
     });
+
+
 });
 
 
