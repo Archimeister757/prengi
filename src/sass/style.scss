@@ -48,14 +48,21 @@ body {
         }
     }
 }
-.header {
+.title {
     color: #FFFFFF;
     font-size: 30px;
-    font-weight: 700;
+    font-weight: 900;
     text-align: center;
-    &_first {
+    &_width600px {
         margin: 0 auto;
         max-width: 600px;
+    }
+    &_width400px {
+        margin: 0 auto;
+        max-width: 400px;
+    }
+    &_black {
+        color: #000;
     }
 }
 
@@ -64,5 +71,6 @@ body {
 @import 'blocks/promo';
 @import 'blocks/possibilities';
 @import 'blocks/decision';
+@import 'blocks/advantages';
 @import 'base/media';
 
