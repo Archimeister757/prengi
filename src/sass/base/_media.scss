@@ -46,6 +46,14 @@
             grid-template-rows: repeat(6, 353px);
         }
     }
+    .options {
+        &__subtitle {
+            font-size: 27px;
+        }
+        &__descr {
+            font-size: 15px;
+        }
+    }
 }
 
 @media (max-width: 992px) {
@@ -135,6 +143,17 @@
             width: 650px;
         }
     }
+    .options {
+        padding: 40px 0;
+        &__subtitle {
+            font-size: 23px;
+        }
+        &__descr {
+            line-height: 22px;
+            font-size: 12px;
+        }
+        
+    }
     
 }
 
@@ -144,7 +163,6 @@
     }
     .promo {
         position: relative;
-        padding: 60px 10px 40px;
         &__menu {
             position: fixed;
             display: flex;
@@ -236,7 +254,7 @@
         left: 0;
         width: 100%;
         height: 50px;
-        background-color: #3498dbe3;
+        background-color: #3498db00;
         z-index: 5;
     }
     .humburger {
@@ -251,7 +269,7 @@
             display: block;
             height: 2px;
             width:  100%;
-            background-color: #fff;
+            background-color: $main-color;
             margin-bottom: 6px;
             transition: 0.5s all;
         }
@@ -301,12 +319,61 @@
     .advantages {
         padding: 60px 0;
     }
+    .options {
+        padding: 28px 0;
+        background: url('../img/options/options_bg-mini.jpg') center center/cover no-repeat;
+        min-height: 923px;
+        &__subtitle-right, &__subtitle-left {
+            right: auto;
+            left: 15%;
+            font-size: 28px;
+            z-index: 1;
+        }
+        &__subtitle-right {
+            top: 22%;
+            text-align: left;
+        }
+        &__subtitle-left {
+            top: auto;
+            bottom: 27%;
+        }
+        &__descr-right, &__descr-left {
+            right: auto;
+            left: 15%;
+            text-align: left;
+            font-size: 14px;
+            z-index: 1;
+        }
+        &__descr-right {
+            top: 26%;
+        }
+        &__descr-left {
+            top: auto;
+            bottom: 20%;
+        }
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            background:  url('../img/options/options_before.png');
+            width: 168px;
+            height: 168px;
+        }
+        &::before {
+            top: 17%;
+            left: 10%;
+        }
+        &::after {
+            bottom: 16%;
+            left: 10%;
+        }
+    }
         
 }
 
 @media (max-width: 576px) {
     .container {
         width: 100%;
+        padding: 0 5px;
     }
     .promo {
         &__up {
@@ -400,4 +467,26 @@
             height: auto;
         }
     }
+    .options {
+        min-height: 655px;
+        &__subtitle-right, &__subtitle-left {
+            left: 8%;
+            font-size: 20px;
+        }
+        &__descr-right, &__descr-left {
+            font-size: 10px;
+            left: 8%;
+        }
+        &::before, &::after {
+            left: 0;
+            width: 100%;
+            height: 90px;
+        }
+        &::before {
+            top: 19%;
+        }
+        &::after {
+            bottom: 18%;
+        }
+    }   
 }
