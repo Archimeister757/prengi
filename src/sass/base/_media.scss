@@ -154,6 +154,14 @@
         }
         
     }
+    .footer {
+        &__about {
+            display: none;
+        }
+        &__blocks {
+            grid-template-columns: 265px 120px 115px;
+        }
+    }
     
 }
 
@@ -176,7 +184,7 @@
             visibility: hidden;
             opacity: 0;
             transition: all 0.6s;
-            background-color: #3498dbe3;
+            background-color: #00c0f0ea;
             &_active {
                 left: 0;
                 visibility: visible;
@@ -320,7 +328,7 @@
         padding: 60px 0;
     }
     .options {
-        padding: 28px 0;
+        padding: 20px 0;
         background: url('../img/options/options_bg-mini.jpg') center center/cover no-repeat;
         min-height: 923px;
         &__subtitle-right, &__subtitle-left {
@@ -436,10 +444,10 @@
     }
     .carousel {
         &__inner {
-            width: 315px;
+            width: 310px;
         }
         img {
-            width: 315px;
+            width: 310px;
         }
     }
     .title {
@@ -470,23 +478,51 @@
     .options {
         min-height: 655px;
         &__subtitle-right, &__subtitle-left {
-            left: 8%;
+            left: 11%;
             font-size: 20px;
         }
         &__descr-right, &__descr-left {
+            width: 290px;
             font-size: 10px;
-            left: 8%;
+            left: 11%;
         }
         &::before, &::after {
-            left: 0;
-            width: 100%;
+            left: 5%;
+            width: 90px;
             height: 90px;
         }
         &::before {
-            top: 19%;
+            top: 20%;
         }
         &::after {
-            bottom: 18%;
+            bottom: 19%;
+        }
+    }
+    .access {
+        padding: 40px 0;
+        img {
+            margin: 0 auto 40px auto;
+            width: 50%;
         }
     }   
+    .footer {
+        padding: 30px 0;
+        &__title {
+            font-size: 15px;
+        }
+        &__divider {
+            margin: 30px auto;
+        }
+        &__blocks {
+            grid-template-columns: auto;
+            grid-template: repeat(2, auto) / repeat(2, auto);
+            row-gap: 15px;
+        }
+        &__link {
+            font-size: 11px;
+        }
+        &__rights {
+            font-size: 11px;
+        }
+    }
 }
