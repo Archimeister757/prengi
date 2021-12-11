@@ -1,4 +1,8 @@
 window.addEventListener('DOMContentLoaded', () => {
+    'use strict';
+
+    // Меню
+
     const menu = document.querySelector('.promo__menu'),
     menuItem = document.querySelectorAll('.promo__menu-item'),
     hamburger = document.querySelector('.humburger');
@@ -14,6 +18,8 @@ window.addEventListener('DOMContentLoaded', () => {
             menu.classList.toggle('promo__menu_active');
         });
     });
+
+    // Слайдер
 
     $(document).ready(function(){
         $('.carousel__inner').slick({
@@ -36,6 +42,35 @@ window.addEventListener('DOMContentLoaded', () => {
             ]
         });
     });
+
+    // Pageup
+
+    (function() {
+
+        const goTopBtn = document.querySelector('.pageup');
+      
+        window.addEventListener('scroll', trackScroll);
+        goTopBtn.addEventListener('click', backToTop);
+      
+        function trackScroll() {
+          const scrolled = window.pageYOffset;
+          const coords = document.documentElement.clientHeight;
+      
+          if (scrolled > coords) {
+            goTopBtn.classList.add('pageup-show');
+          }
+          if (scrolled < coords) {
+            goTopBtn.classList.remove('pageup-show');
+          }
+        }
+      
+        function backToTop() {
+          if (window.pageYOffset > 0) {
+            window.scrollTo({ top: 0, behavior: 'smooth'});
+          }
+        }
+      
+    })();
 });
 
 

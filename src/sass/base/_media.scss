@@ -61,7 +61,7 @@
         max-width: 720px;
     }
     .promo {
-        padding: 40px 10px;
+        padding: 40px 10px 120px 10px;
         &__down {
             grid-template-columns: minmax(auto, 538px);
             justify-content: center;
@@ -73,7 +73,10 @@
             grid-template-columns: minmax(auto, 140px) minmax(auto, 550px);
         }
         &__title {
-            margin: 100px 0 27px;
+            margin: 140px 0 45px;
+        }
+        &__subtitle {
+            margin: 0 0 70px 0;
         }
     }
     .possibilities {
@@ -170,6 +173,7 @@
         max-width: 540px;
     }
     .promo {
+        height: 100vh;
         position: relative;
         &__menu {
             position: fixed;
@@ -222,7 +226,7 @@
         &__title {
             font-size: 38px;
             font-weight: 700;
-            margin: 70px 0 40px;
+            margin: 140px 0 40px;
         }
         &__subtitle {
             font-size: 19px;
@@ -384,15 +388,17 @@
         padding: 0 5px;
     }
     .promo {
+        height: auto;
         &__up {
             grid-template-columns: minmax(auto,100px) minmax(auto,550px)
         }
         &__title {
-            margin: 45px 0 27px;
+            margin: 70px 0 25px;
             font-size: 30px;
         }
         &__subtitle {
-            font-size: 18px;
+            margin: 0 0 50px;
+            font-size: 17px;
         }
         &__menu {
             width: 70%;

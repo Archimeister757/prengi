@@ -1,0 +1,17 @@
+.title {
+    color: #FFFFFF;
+    font-size: 30px;
+    font-weight: 900;
+    text-align: center;
+    &_width600px {
+        margin: 0 auto;
+        max-width: 600px;
+    }
+    &_width400px {
+        margin: 0 auto;
+        max-width: 400px;
+    }
+    &_black {
+        color: #000;
+    }
+}
