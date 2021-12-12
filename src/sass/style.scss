@@ -16,6 +16,7 @@ body {
     margin: 0 auto;
 }
 
+
 @import 'base/variables';
 @import 'base/mixins';
 @import 'blocks/cap';
@@ -29,5 +30,6 @@ body {
 @import 'blocks/btn';
 @import 'blocks/pageup';
 @import 'blocks/_titles';
+@import 'blocks/modal';
 @import 'base/media';
 

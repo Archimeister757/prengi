@@ -90,7 +90,7 @@
                 <div class="promo__content">
                     <h1 class="promo__title">Управляй своим бизнесом через Smartphone</h1>
                     <h2 class="promo__subtitle">PRENGI - Платформа для прозрачного управления бизнесом</h2>
-                    <button class="btn promo__btn">Получить доступ</button>
+                    <button data-modal class="btn promo__btn">Получить доступ</button>
                 </div>
                 <img src="img/promo/phone_main_1X.png" alt="phone">
             </div>
@@ -216,7 +216,7 @@
         <div class="container">
             <img src="icons/access/access_icon.png" alt="click">
             <h2 class="title title_black title_width600px">Приступить очень просто! Нужно получить доступ и начать работу!</h2>
-            <button class="btn access__btn">связаться с нами</button>
+            <button data-modal class="btn access__btn">связаться с нами</button>
         </div>
     </section>
 
@@ -270,6 +270,21 @@
             <p class="footer__rights">© Prengi Ink. 2008-2017 Все права защищены.</p>
         </div>
     </footer>
+
+    <div class="overlay">
+        <div class="modal" id="access">
+            <div data-close class="modal__close">&times;</div>
+            <div class="modal__subtitle">Просто заполните форму заявки</div>
+            <div class="modal__descr">и мы перезвоним вам в течении 10 минут</div>
+            <form class="feed-form" action="#">
+                <input name="name" placeholder="Ваше имя" type="text">
+                <input name="phone" placeholder="Ваш телефон">
+                <input name="email" placeholder="Ваш E-mail" type="email">
+
+                <button class="btn btn_modal">получить доступ</button>
+            </form>
+        </div>
+    </div>
 
     <a href="#up" class="pageup">
         <img src="icons/up.svg" alt="up">

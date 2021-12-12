@@ -66,11 +66,36 @@ window.addEventListener('DOMContentLoaded', () => {
       
         function backToTop() {
           if (window.pageYOffset > 0) {
-            window.scrollTo({ top: 0, behavior: 'smooth'});
+            window.scrollTo({ 
+              top: 0, 
+              behavior: 'smooth'
+            });
           }
         }
       
     })();
+
+    // Modal
+
+    const modalTrigger = document.querySelectorAll('[data-modal]'),
+          modalClose = document.querySelector('[data-close]'),
+          modal = document.querySelector('.overlay');
+
+    function modalShow() {
+      modal.classList.add('show');
+    }
+
+    function modalHide() {
+      modal.classList.remove('show');
+    }
+
+    modalTrigger.forEach(b => {
+      b.addEventListener('click', modalShow);
+    });
+
+    modalClose.addEventListener('click', modalHide);
+
+    console.log(modalTrigger, modalClose, modal);
 });
 
 
