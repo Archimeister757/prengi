@@ -1,0 +1,41 @@
+.options {
+    position: relative;
+    padding: 60px 0;
+    min-height: 434px;
+    background: url('../img/options/options_bg-1440px.jpg') center center/cover no-repeat;
+    &__subtitle {
+        position: absolute;
+        margin: 0;
+        top: 46%;
+        font-size: 30px;
+        line-height: 22px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #ffffff;
+        
+    }
+    &__subtitle-right {
+        right: 55%;
+        text-align: right;
+    }
+    &__subtitle-left {
+        left: 55%;
+    }
+    &__descr {
+        position: absolute;
+        margin: 0;
+        top: 56%;
+        max-width: 480px;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 300;
+        color: #ffffff;
+    }
+    &__descr-left {
+        left: 55%;
+    }
+    &__descr-right {
+        right: 55%;
+        text-align: right;
+    }
+}

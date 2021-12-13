@@ -1,20 +1,59 @@
 .decision {
-    background: url('../../img/decision/slider_bg.jpg') center (center/cover) no-repeat;
+    padding: 80px 0;
+    background: url('../img/decision/slider_bg.jpg') center (center/cover) no-repeat;
+    &__menu {
+        padding-left: 0;
+        width: 850px;
+        height: 65px;
+        margin: 50px auto 0 auto;
+        display: grid;
+        grid-template-columns: repeat(6, auto);
+        align-content: center;
+        border: 1px solid rgba(255, 255, 255, 0.767);
+        border-radius: 5px;
+        list-style-type: none;
+        &-item {
+            position: relative;
+            font-size: 14px;
+            text-align: center;
+            color: rgb(255, 255, 255);
+            font-weight: 500;
+            &::after {
+                content: '';
+                position: absolute;
+                top: -18px;
+                right: 0;
+                height: 54px;
+                width: 1px;
+                background-color: rgba(255, 255, 255, 0.432);
+            }
+            &:last-child {
+                &::after {
+                    display: none;
+                }
+            }
+            &:hover {
+                color: $main-color;
+                transition: 0.5s;
+                cursor: pointer;
+            }
+        }
+    }
 }
 .carousel {
-    padding: 81px 0;
+    margin-top: 70px;
     &__inner {
         position: relative;
         display: flex;
-        width: 750px;
+        width: 950px;
         margin: 0 auto;
     }
-    /* .slick-prev, .slick-next {
+    .slick-prev, .slick-next {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
         left: -66px;
-        background-color: #fff;
+        background-color: #fff0;
         border: none;
         img {
             width: 31px;
@@ -24,5 +63,5 @@
     .slick-next {
         left: auto;
         right: -66px;
-    } */
+    }
 }

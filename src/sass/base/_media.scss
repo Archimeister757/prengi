@@ -1,5 +1,5 @@
 @media (max-width: 1200px) {
-    .header {
+    .cap {
         padding: 0;
         &__top {
             display: none;
@@ -25,6 +25,32 @@
             grid-template-columns: repeat(3, 285px);
         }
         &__text {
+            font-size: 15px;
+        }
+    }
+    .carousel {
+        &__inner {
+            width: 800px;
+        }
+        img {
+            width: 800px;
+            height: auto;
+        }
+    }
+    .decision {
+        background: url('../img/decision/slider_bg_small.jpg') center (center/cover) no-repeat;
+    }
+    .advantages {
+        &__blocks {
+            grid-template-columns: 570px;
+            grid-template-rows: repeat(6, 353px);
+        }
+    }
+    .options {
+        &__subtitle {
+            font-size: 27px;
+        }
+        &__descr {
             font-size: 15px;
         }
     }
@@ -57,7 +83,7 @@
             grid-template-rows: repeat(3, 230px);
             justify-content: space-around;
         }
-        &__header {
+        &__title {
             position: relative;
             text-align: center;
             top: auto;
@@ -99,9 +125,41 @@
             transform: rotate(-90deg);
             bottom: 35%;
             right: -73%;
-            background: url('../../icon/twoScreen/arrow.png');
+            background: url('../../icons/twoScreen/arrow.png');
             width: 170px;
             height: 73px;
+        }
+    }
+    .carousel {
+        &__inner {
+            width: 650px;
+        }
+        img {
+            width: 650px;
+        }
+    }
+    .decision {
+        &__menu {
+            width: 650px;
+        }
+    }
+    .options {
+        padding: 40px 0;
+        &__subtitle {
+            font-size: 23px;
+        }
+        &__descr {
+            line-height: 22px;
+            font-size: 12px;
+        }
+        
+    }
+    .footer {
+        &__about {
+            display: none;
+        }
+        &__blocks {
+            grid-template-columns: 265px 120px 115px;
         }
     }
     
@@ -113,7 +171,6 @@
     }
     .promo {
         position: relative;
-        padding: 60px 10px 40px;
         &__menu {
             position: fixed;
             display: flex;
@@ -127,7 +184,7 @@
             visibility: hidden;
             opacity: 0;
             transition: all 0.6s;
-            background-color: #3498dbe3;
+            background-color: #00c0f0ea;
             &_active {
                 left: 0;
                 visibility: visible;
@@ -161,7 +218,22 @@
                     }
                 }
             }  
-        }   
+        }
+        &__title {
+            font-size: 38px;
+            font-weight: 700;
+            margin: 70px 0 40px;
+        }
+        &__subtitle {
+            font-size: 19px;
+        }
+        
+           
+    }
+    .btn {
+        width: 215px;
+        height: 50px;
+        font-size: 15px;
     }
     .possibilities {
         padding: 60px 0;
@@ -175,8 +247,8 @@
         &__text {
             font-size: 12px;
         }
-        &__header {
-            font-size: 44px;
+        &__title {
+            font-size: 40px;
         }
     }
     #one, #two, #three {
@@ -190,7 +262,7 @@
         left: 0;
         width: 100%;
         height: 50px;
-        background-color: #3498dbe3;
+        background-color: #3498db00;
         z-index: 5;
     }
     .humburger {
@@ -205,7 +277,7 @@
             display: block;
             height: 2px;
             width:  100%;
-            background-color: #fff;
+            background-color: $main-color;
             margin-bottom: 6px;
             transition: 0.5s all;
         }
@@ -227,28 +299,105 @@
         }
             
     }
+    .carousel {
+        &__inner {
+            width: 500px;
+        }
+        img {
+            width: 500px;
+        }
+    }
+    .decision {
+        padding: 60px 0;
+        &__menu {
+            width: 500px;
+            height: 45px;
+            &-item {
+                font-size: 11px;
+                &:after {
+                    top: -12px;
+                    height: 37px;
+                }
+            }
+        }
+    }
+    .title {
+        font-size: 25px;
+    }
+    .advantages {
+        padding: 60px 0;
+    }
+    .options {
+        padding: 20px 0;
+        background: url('../img/options/options_bg-mini.jpg') center center/cover no-repeat;
+        min-height: 923px;
+        &__subtitle-right, &__subtitle-left {
+            right: auto;
+            left: 15%;
+            font-size: 28px;
+            z-index: 1;
+        }
+        &__subtitle-right {
+            top: 22%;
+            text-align: left;
+        }
+        &__subtitle-left {
+            top: auto;
+            bottom: 27%;
+        }
+        &__descr-right, &__descr-left {
+            right: auto;
+            left: 15%;
+            text-align: left;
+            font-size: 14px;
+            z-index: 1;
+        }
+        &__descr-right {
+            top: 26%;
+        }
+        &__descr-left {
+            top: auto;
+            bottom: 20%;
+        }
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            background:  url('../img/options/options_before.png');
+            width: 168px;
+            height: 168px;
+        }
+        &::before {
+            top: 17%;
+            left: 10%;
+        }
+        &::after {
+            bottom: 16%;
+            left: 10%;
+        }
+    }
         
 }
 
 @media (max-width: 576px) {
     .container {
         width: 100%;
+        padding: 0 5px;
     }
     .promo {
         &__up {
             grid-template-columns: minmax(auto,100px) minmax(auto,550px)
         }
         &__title {
-            margin: 64px 0 27px;
-            font-size: 34px;
+            margin: 45px 0 27px;
+            font-size: 30px;
         }
         &__subtitle {
-            font-size: 20px;
+            font-size: 18px;
         }
         &__menu {
             width: 70%;
             &-item {
-                font-size: 18px;
+                font-size: 14px;
             }
         }
         
@@ -274,23 +423,106 @@
             margin-top: 20px;
             font-size: 11px;
         }
-        &__header {
-            font-size: 40px;
+        &__title {
+            font-size: 30px;
         }
     }
     #one, #two, #three {
         &::before {
-            background: url('../../icon/twoScreen/arrowMobile.svg');
+            background: url('../../icons/twoScreen/arrowMobile.svg');   
             transform: none;
             width: 30px;
             height: 30px;
-            right: -33px;
+            right: -32px;
             bottom: 40%;
         }
     }
     .btn {
-        width: 210px;
-        height: 50px;
+        width: 185px;
+        height: 40px;
+        font-size: 13px;
     }
-    
+    .carousel {
+        &__inner {
+            width: 310px;
+        }
+        img {
+            width: 310px;
+        }
+    }
+    .title {
+        font-size: 20px;
+    }
+    .decision {
+        padding: 55px 0;
+        &__menu {
+            display: none;
+        }
+    }
+    .advantages {
+        padding: 40px 0;
+        &__blocks {
+            margin-top: 30px;
+            grid-template-columns: 100%;
+            grid-template-rows: auto;
+        }
+        &__descr {
+            font-size: 11px;
+            line-height: 22px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .options {
+        min-height: 655px;
+        &__subtitle-right, &__subtitle-left {
+            left: 11%;
+            font-size: 20px;
+        }
+        &__descr-right, &__descr-left {
+            width: 290px;
+            font-size: 10px;
+            left: 11%;
+        }
+        &::before, &::after {
+            left: 5%;
+            width: 90px;
+            height: 90px;
+        }
+        &::before {
+            top: 20%;
+        }
+        &::after {
+            bottom: 19%;
+        }
+    }
+    .access {
+        padding: 40px 0;
+        img {
+            margin: 0 auto 40px auto;
+            width: 50%;
+        }
+    }   
+    .footer {
+        padding: 30px 0;
+        &__title {
+            font-size: 15px;
+        }
+        &__divider {
+            margin: 30px auto;
+        }
+        &__blocks {
+            grid-template-columns: auto;
+            grid-template: repeat(2, auto) / repeat(2, auto);
+            row-gap: 15px;
+        }
+        &__link {
+            font-size: 11px;
+        }
+        &__rights {
+            font-size: 11px;
+        }
+    }
 }
