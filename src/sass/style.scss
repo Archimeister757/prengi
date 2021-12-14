@@ -1,35 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&display=swap");
 
 * {
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 h2 {
-    margin: 0;
+  margin: 0;
 }
 body {
-    margin: 0;
+  margin: 0;
 }
 
 .container {
-    width: 1140px;
-    margin: 0 auto;
+  width: 1140px;
+  margin: 0 auto;
 }
 
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
 
-@import 'base/variables';
-@import 'base/mixins';
-@import 'blocks/cap';
-@import 'blocks/promo';
-@import 'blocks/possibilities';
-@import 'blocks/decision';
-@import 'blocks/advantages';
-@import 'blocks/options';
-@import 'blocks/_access';
-@import 'blocks/_footer';
-@import 'blocks/btn';
-@import 'blocks/pageup';
-@import 'blocks/_titles';
-@import 'blocks/modal';
-@import 'base/media';
-
+@import "base/variables";
+@import "base/mixins";
+@import "blocks/cap";
+@import "blocks/promo";
+@import "blocks/possibilities";
+@import "blocks/decision";
+@import "blocks/advantages";
+@import "blocks/options";
+@import "blocks/_access";
+@import "blocks/_footer";
+@import "blocks/btn";
+@import "blocks/pageup";
+@import "blocks/_titles";
+@import "blocks/modal";
+@import "base/media";

@@ -1,101 +1,107 @@
-window.addEventListener('DOMContentLoaded', () => {
-    'use strict';
+window.addEventListener("DOMContentLoaded", () => {
+  "use strict";
 
-    // Меню
+  // Меню
 
-    const menu = document.querySelector('.promo__menu'),
-    menuItem = document.querySelectorAll('.promo__menu-item'),
-    hamburger = document.querySelector('.humburger');
+  const menu = document.querySelector(".promo__menu"),
+    menuItem = document.querySelectorAll(".promo__menu-item"),
+    hamburger = document.querySelector(".humburger");
 
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('humburger_active');
-        menu.classList.toggle('promo__menu_active');
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("humburger_active");
+    menu.classList.toggle("promo__menu_active");
+  });
+
+  menuItem.forEach((item) => {
+    item.addEventListener("click", () => {
+      hamburger.classList.toggle("humburger_active");
+      menu.classList.toggle("promo__menu_active");
     });
+  });
 
-    menuItem.forEach(item => {
-        item.addEventListener('click', () => {
-            hamburger.classList.toggle('humburger_active');
-            menu.classList.toggle('promo__menu_active');
-        });
+  // Слайдер
+
+  $(document).ready(function () {
+    $(".carousel__inner").slick({
+      speed: 500,
+      infinite: true,
+      variableWidth: true,
+      autoplay: true,
+      autoplaySpeed: 4000,
+      prevArrow:
+        '<button type="button" class="slick-prev"><img src="icons/slider/left_arrow.png"></button>',
+      nextArrow:
+        '<button type="button" class="slick-next"><img src="icons/slider/right_arrow.png"></button>',
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: "20px",
+          },
+        },
+      ],
     });
+  });
 
-    // Слайдер
+  // Pageup
 
-    $(document).ready(function(){
-        $('.carousel__inner').slick({
-            speed: 500,
-            infinite: true,
-            variableWidth: true,
-            autoplay: true,
-            autoplaySpeed: 4000,
-            prevArrow: '<button type="button" class="slick-prev"><img src="icons/slider/left_arrow.png"></button>',
-            nextArrow: '<button type="button" class="slick-next"><img src="icons/slider/right_arrow.png"></button>',
-            responsive: [
-                {
-                    breakpoint: 992,
-                    settings: {
-                        arrows: false,
-                        centerMode: true,
-                        centerPadding: '20px',
-                    }
-                }
-            ]
-        });
-    });
+  (function () {
+    const goTopBtn = document.querySelector(".pageup");
 
-    // Pageup
+    window.addEventListener("scroll", trackScroll);
+    goTopBtn.addEventListener("click", backToTop);
 
-    (function() {
+    function trackScroll() {
+      const scrolled = window.pageYOffset;
+      const coords = document.documentElement.clientHeight;
 
-        const goTopBtn = document.querySelector('.pageup');
-      
-        window.addEventListener('scroll', trackScroll);
-        goTopBtn.addEventListener('click', backToTop);
-      
-        function trackScroll() {
-          const scrolled = window.pageYOffset;
-          const coords = document.documentElement.clientHeight;
-      
-          if (scrolled > coords) {
-            goTopBtn.classList.add('pageup-show');
-          }
-          if (scrolled < coords) {
-            goTopBtn.classList.remove('pageup-show');
-          }
-        }
-      
-        function backToTop() {
-          if (window.pageYOffset > 0) {
-            window.scrollTo({ 
-              top: 0, 
-              behavior: 'smooth'
-            });
-          }
-        }
-      
-    })();
-
-    // Modal
-
-    const modalTrigger = document.querySelectorAll('[data-modal]'),
-          modalClose = document.querySelector('[data-close]'),
-          modal = document.querySelector('.overlay');
-
-    function modalShow() {
-      modal.classList.add('show');
+      if (scrolled > coords) {
+        goTopBtn.classList.add("pageup-show");
+      }
+      if (scrolled < coords) {
+        goTopBtn.classList.remove("pageup-show");
+      }
     }
 
-    function modalHide() {
-      modal.classList.remove('show');
+    function backToTop() {
+      if (window.pageYOffset > 0) {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
     }
+  })();
 
-    modalTrigger.forEach(b => {
-      b.addEventListener('click', modalShow);
-    });
+  // Modal
 
-    modalClose.addEventListener('click', modalHide);
+  const modalTrigger = document.querySelectorAll("[data-modal]"),
+    modalClose = document.querySelector("[data-close]"),
+    modal = document.querySelector(".modal");
 
-    console.log(modalTrigger, modalClose, modal);
+  function modalShow() {
+    modal.classList.remove("hide");
+    modal.classList.add("show");
+    document.body.style.overflow = "hidden";
+  }
+
+  function modalHide() {
+    modal.classList.remove("show");
+    modal.classList.add("hide");
+    document.body.style.overflow = "";
+  }
+
+  modalTrigger.forEach((b) => {
+    b.addEventListener("click", modalShow);
+  });
+
+  modalClose.addEventListener("click", modalHide);
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modalHide();
+    }
+  });
 });
-
-
